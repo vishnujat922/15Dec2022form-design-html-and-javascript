@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javascript function</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="fname" placeholder="enter your first name">
+            <input type="text" name="lname" placeholder="enter your last name">
+            <input type="submit" value="save" onclick="saveData(event)">
+        </form>
+        <ul id="myidea">
+            <li></li>
+        </ul>
+         <script src="./js/js.script.js"></script>
+        <script>
+            //before the closing of body tag we called 
+            // globle variable
+            
+            let myidea = document.getElementById("myidea");
+            //let myidea = document.getElementbyid("myidea");
+            myidea.innerHTML = "";
+            // function defination
+            function saveData(e){// = event = formal argument
+                //1 object.property
+                //2 object.method();
+                e.preventDefault();
+                console.log("ok");
+
+
+                // local variable
+                let fn = document.querySelector('input[name = fname]');
+                let sn = document.querySelector('input[name = lname]');
+                // object.method();
+                // method = function
+                console.log(fn.value);
+                console.log(sn.value);
+                myidea.innerHTML += '<li>'+fn.value+' '+sn.value+'</li>';
+
+
+
+                
+            }
+
+
+        </script>
+    </body>
+</html>
